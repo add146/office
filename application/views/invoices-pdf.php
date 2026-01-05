@@ -287,8 +287,13 @@
     <table class="header-table">
       <tr>
         <td class="logo-cell">
-          <?php if(full_logo() && file_exists('./assets/uploads/logos/'.full_logo())) { ?>
-            <img src="<?=base_url('assets/uploads/logos/'.full_logo())?>" alt="<?= company_name() ?>" style="max-height: 60px; max-width: 200px;">
+          <?php
+          $logo_file = full_logo();
+          $logo_path = FCPATH . 'assets/uploads/logos/' . $logo_file;
+          if ($logo_file && file_exists($logo_path)) {
+            ?>
+            <img src="<?= base_url('assets/uploads/logos/' . $logo_file) ?>" alt="<?= company_name() ?>"
+              style="max-height: 60px; max-width: 200px;">
           <?php } else { ?>
             <h3><?= company_name() ?></h3>
           <?php } ?>
