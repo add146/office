@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  # PHP/Apache Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: office_khibroh_app
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./assets/uploads:/var/www/html/assets/uploads
+      - ./application/logs:/var/www/html/application/logs
+    environment:
+      - DB_HOST=db
+      - DB_NAME=timwork
+      - DB_USER=root
+      - DB_PASS=secret_password
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - khibroh_network
+
+  # MySQL Database
+  db:
+    image: mysql:8.0
+    container_name: office_khibroh_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: secret_password
+      MYSQL_DATABASE: timwork
+      MYSQL_CHARSET: utf8mb4
+      MYSQL_COLLATION: utf8mb4_unicode_ci
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-psecret_password" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - khibroh_network
+
+  # phpMyAdmin (optional - untuk manajemen database)
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: office_khibroh_pma
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: secret_password
+    depends_on:
+      - db
+    networks:
+      - khibroh_network
+
+networks:
+  khibroh_network:
+    driver: bridge
+
+volumes:
+  db_data:

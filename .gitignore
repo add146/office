@@ -1,0 +1,33 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Uploads (optional - comment out if you want to version control uploads)
+# /uploads/
+
+# Cache
+/application/cache/*
+!/application/cache/index.html
+!/application/cache/.htaccess
+
+# Session
+/application/sessions/*
+!/application/sessions/index.html

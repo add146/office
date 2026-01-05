@@ -1,0 +1,36 @@
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs (akan di-mount sebagai volume)
+application/logs/*.log
+
+# Cache
+application/cache/*
+!application/cache/.htaccess
+!application/cache/index.html
+
+# Local config
+.env.local
+
+# Documentation
+*.md
+!README.md
+
+# Install folder (hapus setelah install)
+# install/
