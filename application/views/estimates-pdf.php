@@ -29,7 +29,9 @@
   }
 
   .logo-cell h3 {
-    color: #6777ef;
+    color:
+      <?= theme_color() ?>
+    ;
     margin: 0;
     font-size: 20px;
   }
@@ -40,7 +42,9 @@
   }
 
   .title-cell h1 {
-    color: #6777ef;
+    color:
+      <?= theme_color() ?>
+    ;
     font-size: 28px;
     font-weight: normal;
     margin: 0;
@@ -74,7 +78,9 @@
 
   .info-value-orange {
     font-weight: bold;
-    color: #6777ef;
+    color:
+      <?= theme_color() ?>
+    ;
   }
 
   .client-cell {
@@ -96,7 +102,9 @@
     background-color: #f5f5f5;
     padding: 15px;
     margin-bottom: 20px;
-    border-left: 4px solid #6777ef;
+    border-left: 4px solid
+      <?= theme_color() ?>
+    ;
   }
 
   .total-due-label {
@@ -120,7 +128,9 @@
   }
 
   .items-table th {
-    background-color: #6777ef;
+    background-color:
+      <?= theme_color() ?>
+    ;
     color: #fff;
     padding: 10px;
     text-align: left;
@@ -220,7 +230,9 @@
   }
 
   .grand-total-row {
-    background-color: #6777ef;
+    background-color:
+      <?= theme_color() ?>
+    ;
     color: #fff;
   }
 
