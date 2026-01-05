@@ -287,7 +287,11 @@
     <table class="header-table">
       <tr>
         <td class="logo-cell">
-          <h3><?= company_name() ?></h3>
+          <?php if(full_logo() && file_exists('./assets/uploads/logos/'.full_logo())) { ?>
+            <img src="<?=base_url('assets/uploads/logos/'.full_logo())?>" alt="<?= company_name() ?>" style="max-height: 60px; max-width: 200px;">
+          <?php } else { ?>
+            <h3><?= company_name() ?></h3>
+          <?php } ?>
         </td>
         <td class="title-cell">
           <h1><?= $this->lang->line('estimate') ? strtoupper($this->lang->line('estimate')) : 'ESTIMATE' ?></h1>
@@ -400,7 +404,8 @@
     <?php if (get_offline_bank_transfer() && get_bank_details()) { ?>
       <div class="note-box">
         <div class="note-title">
-          <?= $this->lang->line('payment_method') ? $this->lang->line('payment_method') : 'Payment Method' ?>:</div>
+          <?= $this->lang->line('payment_method') ? $this->lang->line('payment_method') : 'Payment Method' ?>:
+        </div>
         <div class="note-content"><?= get_bank_details() ?></div>
       </div>
     <?php } ?>
