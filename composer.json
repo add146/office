@@ -1,0 +1,7 @@
+{
+    "name": "office/khibroh",
+    "description": "Office Khibroh Application",
+    "require": {
+        "stripe/stripe-php": "^7.65"
+    }
+}
