@@ -1,4 +1,4 @@
-<?php $this->load->view('includes/head'); ?>
+﻿<?php $this->load->view('includes/head'); ?>
 <style>
   body {
     font-family: 'DejaVu Sans', Arial, sans-serif;
@@ -287,16 +287,9 @@
     <table class="header-table">
       <tr>
         <td class="logo-cell">
-          <?php
-          $logo_file = full_logo();
-          $logo_path = FCPATH . 'assets/uploads/logos/' . $logo_file;
-          if ($logo_file && file_exists($logo_path)) {
-            ?>
-            <img src="<?= base_url('assets/uploads/logos/' . $logo_file) ?>" alt="<?= company_name() ?>"
-              style="max-height: 60px; max-width: 200px;">
-          <?php } else { ?>
-            <h3><?= company_name() ?></h3>
-          <?php } ?>
+          <img src="<?= base_url('assets/uploads/logos/' . full_logo()) ?>" alt=""
+            style="max-height: 50px; max-width: 180px; display: block; margin-bottom: 5px;">
+          <h3><?= company_name() ?></h3>
         </td>
         <td class="title-cell">
           <h1><?= $this->lang->line('invoice') ? strtoupper($this->lang->line('invoice')) : 'INVOICE' ?></h1>
