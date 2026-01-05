@@ -306,7 +306,7 @@
         <td style="width: 25%;">
           <span class="info-label"><?= $this->lang->line('date') ? $this->lang->line('date') : 'Date' ?></span>
           <span
-            class="info-value"><?= htmlspecialchars(format_date($estimate[0]['estimate_date'], system_date_format())) ?></span>
+            class="info-value"><?= htmlspecialchars(format_date($estimate[0]['invoice_date'], system_date_format())) ?></span>
         </td>
         <td class="client-cell" style="width: 50%;">
           <span
@@ -400,7 +400,8 @@
     <?php if (get_offline_bank_transfer() && get_bank_details()) { ?>
       <div class="note-box">
         <div class="note-title">
-          <?= $this->lang->line('payment_method') ? $this->lang->line('payment_method') : 'Payment Method' ?>:</div>
+          <?= $this->lang->line('payment_method') ? $this->lang->line('payment_method') : 'Payment Method' ?>:
+        </div>
         <div class="note-content"><?= get_bank_details() ?></div>
       </div>
     <?php } ?>
