@@ -1,4 +1,4 @@
-﻿<?php $this->load->view('includes/head'); ?>
+<?php $this->load->view('includes/head'); ?>
 <style>
   body {
     font-family: 'DejaVu Sans', Arial, sans-serif;
@@ -287,10 +287,6 @@
     <table class="header-table">
       <tr>
         <td class="logo-cell">
-          <?php if (isset($logo_url) && $logo_url) { ?>
-            <img src="<?= $logo_url ?>" alt=""
-              style="max-height: 50px; max-width: 180px; display: block; margin-bottom: 5px;">
-          <?php } ?>
           <h3><?= company_name() ?></h3>
         </td>
         <td class="title-cell">
@@ -404,8 +400,7 @@
     <?php if (get_offline_bank_transfer() && get_bank_details()) { ?>
       <div class="note-box">
         <div class="note-title">
-          <?= $this->lang->line('payment_method') ? $this->lang->line('payment_method') : 'Payment Method' ?>:
-        </div>
+          <?= $this->lang->line('payment_method') ? $this->lang->line('payment_method') : 'Payment Method' ?>:</div>
         <div class="note-content"><?= get_bank_details() ?></div>
       </div>
     <?php } ?>
