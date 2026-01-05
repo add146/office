@@ -330,6 +330,7 @@ class Estimates extends CI_Controller
 			}
 
 			$this->data['page_title'] = $estimates[0]['estimate_id'] . ' - ' . company_name();
+			$this->data['logo_url'] = base_url('assets/uploads/logos/' . full_logo());
 
 			$this->load->view('estimates-pdf.php', $this->data);
 

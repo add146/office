@@ -622,6 +622,7 @@ class Invoices extends CI_Controller
 			}
 
 			$this->data['page_title'] = $invoices[0]['invoice_id'] . ' - ' . company_name();
+			$this->data['logo_url'] = base_url('assets/uploads/logos/' . full_logo());
 
 			$this->load->view('invoices-pdf.php', $this->data);
 

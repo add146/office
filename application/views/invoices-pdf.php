@@ -287,8 +287,10 @@
     <table class="header-table">
       <tr>
         <td class="logo-cell">
-          <img src="<?= base_url('assets/uploads/logos/' . full_logo()) ?>" alt=""
-            style="max-height: 50px; max-width: 180px; display: block; margin-bottom: 5px;">
+          <?php if (isset($logo_url) && $logo_url) { ?>
+            <img src="<?= $logo_url ?>" alt=""
+              style="max-height: 50px; max-width: 180px; display: block; margin-bottom: 5px;">
+          <?php } ?>
           <h3><?= company_name() ?></h3>
         </td>
         <td class="title-cell">
