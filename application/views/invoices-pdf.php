@@ -290,6 +290,131 @@
     color: #e67e22;
     font-weight: bold;
   }
+
+  /* Mobile Portrait Responsive */
+  @media screen and (max-width: 480px) {
+    body {
+      padding: 10px;
+      font-size: 10px;
+    }
+
+    .header-table td {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo-cell,
+    .title-cell {
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo-cell h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .title-cell h1 {
+      font-size: 20px;
+    }
+
+    .info-table td {
+      display: block;
+      width: 100% !important;
+      text-align: left;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .client-cell {
+      text-align: left;
+    }
+
+    .total-due-box {
+      padding: 10px;
+    }
+
+    .total-due-amount {
+      font-size: 18px;
+    }
+
+    .items-table th,
+    .items-table td {
+      padding: 6px 4px;
+      font-size: 9px;
+    }
+
+    .items-table th:first-child,
+    .items-table td:first-child {
+      width: 40%;
+    }
+
+    .item-name {
+      font-size: 10px;
+    }
+
+    .item-desc {
+      font-size: 8px;
+    }
+
+    .summary-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .payment-cell {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 15px;
+    }
+
+    .totals-cell {
+      width: 100%;
+    }
+
+    .grand-total-row .value {
+      font-size: 14px;
+    }
+
+    .footer-table td {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .footer-left,
+    .footer-right {
+      text-align: center;
+      padding: 5px 0;
+    }
+  }
+
+  /* Small phones */
+  @media screen and (max-width: 360px) {
+    body {
+      padding: 5px;
+      font-size: 9px;
+    }
+
+    .logo-cell h3 {
+      font-size: 14px;
+    }
+
+    .title-cell h1 {
+      font-size: 16px;
+    }
+
+    .total-due-amount {
+      font-size: 16px;
+    }
+
+    .items-table th,
+    .items-table td {
+      padding: 4px 2px;
+      font-size: 8px;
+    }
+  }
 </style>
 </head>
 

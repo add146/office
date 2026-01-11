@@ -1,4 +1,4 @@
-.progress{
+.progress {
     background-color: #ff87b1;
 }
 
@@ -7,16 +7,16 @@
 }
 
 
-.description-wrapper{
+.description-wrapper {
     white-space: pre-wrap;
 }
 
-.gantt .bar{
+.gantt .bar {
     fill: var(--theme-color) !important;
     stroke: #3e003e !important;
 }
 
-.gantt .bar-progress{
+.gantt .bar-progress {
     fill: #0056b3 !important;
 }
 
@@ -24,7 +24,7 @@
     font-size: 16px;
 }
 
-.paymet-box{
+.paymet-box {
     margin: 3px;
     padding: 3px;
     border: 3px solid #0d1137;
@@ -39,14 +39,15 @@
     text-decoration: line-through;
 }
 
-.profile-widget .profile-widget-picture{
+.profile-widget .profile-widget-picture {
     height: 100px;
 }
 
-.navbar .nav-link.nav-link-user img{
+.navbar .nav-link.nav-link-user img {
     height: 30px;
 }
-.profile-widget-header .avatar-item .avatar-badge{
+
+.profile-widget-header .avatar-item .avatar-badge {
     z-index: 1;
     bottom: -65px;
     right: 3px;
@@ -56,7 +57,7 @@
     background-color: #6777ef;
 }
 
-.user-avatar.avatar.avatar-xl{
+.user-avatar.avatar.avatar-xl {
     font-size: 45px;
     height: 100px;
     width: 100px;
@@ -67,31 +68,35 @@
     width: 100% !important;
 }
 
-.system-logos{
-	max-width: 100%;
+.system-logos {
+    max-width: 100%;
     max-height: 100%;
 }
 
-.navbar-logos{
-	padding: 10px;
+.navbar-logos {
+    padding: 10px;
     width: 100%;
     height: 100%;
 }
 
-.kanban .dropdown-toggle{
+.kanban .dropdown-toggle {
     outline: none;
 }
-.kanban .dropdown-toggle:after{
-display: none;
+
+.kanban .dropdown-toggle:after {
+    display: none;
 }
+
 .kanban {
-display: block;
-white-space: nowrap;
-overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+    overflow-x: auto;
 }
+
 .tasks.tasks:not(:last-child) {
-margin-right: 0.25rem;
+    margin-right: 0.25rem;
 }
+
 .tasks {
     display: inline-block;
     width: 17rem;
@@ -101,24 +106,356 @@ margin-right: 0.25rem;
     margin-bottom: 30px;
     border-radius: 0.5rem;
 }
+
 .tasks .task-header {
     color: #9ca3a9;
     padding: 0.5rem;
     font-weight: bold;
 }
+
 .task-list-items {
-min-height: 100px;
-position: relative;
+    min-height: 100px;
+    position: relative;
 }
+
 .task-list-items:before {
-content: "No Tasks";
-position: absolute;
-line-height: 110px;
-width: 100%;
-text-align: center;
-font-weight: 600;
+    content: "No Tasks";
+    position: absolute;
+    line-height: 110px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
 }
+
 .tasks .card {
-white-space: normal;
-margin-top: 1rem;
+    white-space: normal;
+    margin-top: 1rem;
+}
+
+/* ============================================
+   MOBILE PORTRAIT RESPONSIVE STYLES
+   ============================================ */
+
+/* Mobile Portrait (max-width: 576px) */
+@media screen and (max-width: 576px) {
+
+    /* Body & General */
+    body {
+        font-size: 13px;
+    }
+
+    .main-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Section Header */
+    .section-header {
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .section-header h1 {
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .section-header-breadcrumb {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 5px;
+    }
+
+    .section-header-back {
+        margin-right: 10px;
+    }
+
+    /* Section Body */
+    .section-body {
+        padding: 0 10px;
+    }
+
+    /* Cards */
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .card .card-header {
+        flex-wrap: wrap;
+        padding: 12px 15px;
+        min-height: auto;
+    }
+
+    .card .card-header h4 {
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .card .card-header h4+.card-header-action,
+    .card .card-header h4+.card-header-form {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .card .card-body {
+        padding: 15px;
+    }
+
+    .card .card-footer {
+        padding: 12px 15px;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .btn-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .btn-group .btn {
+        padding: 5px 10px;
+    }
+
+    /* Forms */
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        font-size: 13px;
+        padding: 8px 12px;
+        height: 38px;
+    }
+
+    textarea.form-control {
+        height: auto;
+    }
+
+    .input-group .btn {
+        padding: 6px 10px;
+    }
+
+    /* Tables */
+    .table-responsive {
+        font-size: 11px;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px 6px;
+        font-size: 11px;
+    }
+
+    .table .btn-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 10px;
+    }
+
+    .bootstrap-table .fixed-table-container {
+        overflow-x: auto;
+    }
+
+    /* Modals */
+    .modal-dialog {
+        margin: 10px;
+        max-width: calc(100% - 20px);
+    }
+
+    .modal-header {
+        padding: 12px 15px;
+    }
+
+    .modal-title {
+        font-size: 16px;
+    }
+
+    .modal-body {
+        padding: 15px;
+    }
+
+    .modal-footer {
+        padding: 10px 15px;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        padding: 8px;
+    }
+
+    .navbar .form-inline .form-control {
+        width: 150px;
+    }
+
+    /* Sidebar (handled by template but extra fixes) */
+    .main-sidebar {
+        z-index: 1050;
+    }
+
+    .sidebar-menu li a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .sidebar-menu li a .ion,
+    .sidebar-menu li a i {
+        font-size: 16px;
+    }
+
+    /* Badges */
+    .badge {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    /* Statistics Cards */
+    .card.card-statistic-1 .card-icon,
+    .card.card-statistic-2 .card-icon {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .card.card-statistic-1 .card-body,
+    .card.card-statistic-2 .card-body {
+        font-size: 18px;
+    }
+
+    /* Profile Widget */
+    .profile-widget {
+        margin-bottom: 15px;
+    }
+
+    .profile-widget .profile-widget-picture {
+        height: 80px;
+        width: 80px;
+    }
+
+    .profile-widget-header {
+        height: 120px;
+    }
+
+    /* Avatar */
+    .avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .avatar.avatar-xl {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Charts */
+    .chart-container {
+        min-height: 200px;
+    }
+
+    /* Kanban Board */
+    .kanban {
+        padding-bottom: 15px;
+    }
+
+    .tasks {
+        width: 260px;
+        min-width: 260px;
+    }
+
+    /* Dropdowns */
+    .dropdown-menu {
+        max-width: calc(100vw - 30px);
+    }
+
+    /* Tabs */
+    .nav-tabs .nav-link {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    /* Lists */
+    .list-unstyled-border li {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Pagination */
+    .pagination .page-link {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    /* Select2 */
+    .select2-container .select2-selection--single {
+        height: 38px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 36px;
+        font-size: 13px;
+    }
+
+    /* Date Picker */
+    .daterangepicker {
+        width: 280px !important;
+    }
+
+    /* Alerts */
+    .alert {
+        padding: 12px 15px;
+        font-size: 12px;
+    }
+
+    /* Row columns mobile fix */
+    .row>[class*="col-"] {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    /* Hide certain elements on mobile */
+    .d-mobile-none {
+        display: none !important;
+    }
+
+}
+
+/* Extra Small phones (max-width: 375px) */
+@media screen and (max-width: 375px) {
+
+    .section-header h1 {
+        font-size: 16px;
+    }
+
+    .card .card-header h4 {
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    .table th,
+    .table td {
+        padding: 6px 4px;
+        font-size: 10px;
+    }
+
+    .tasks {
+        width: 220px;
+        min-width: 220px;
+    }
+
+    .navbar .form-inline .form-control {
+        width: 120px;
+    }
 }
